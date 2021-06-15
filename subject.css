@@ -1,12 +1,12 @@
 html {
  font-size:large;
- background-color:antiquewhite;
+ background-color:honeydew;
 }
 
 h1 {
  border: 1rem solid;
  border-width: 0.5em;
- color:orange
+ color:black
 }
 
 
@@ -16,10 +16,6 @@ p {
 }
 
 
-nav li {
-  display: inline-block;
-  padding: 20px;
-}
 
 
 ul {
@@ -27,9 +23,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
- font-weight:bold;
- text-transform:uppercase;
-  background-color: lightsteelblue;
+ font-weight:bold;;
 }
 
 li {
@@ -43,7 +37,3 @@ li a {
   text-decoration: none;
 }
 
-
-.wrapper a.active {
- background: lightseagreen;
-}
