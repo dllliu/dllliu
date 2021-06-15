@@ -1,1 +1,79 @@
+<!DOCTYPE html>
 
+<html lang=”en”>
+<link href="subject.css" rel="stylesheet">
+
+<header>
+  
+<h1>Wikipedia Web Scraper</h1>
+ <h2>Daniel Liu, Period 5</h2>
+  
+
+  </header>
+ <body> 
+ 
+ <h2>Project Description</h2>
+   
+  <p>This is a Wikipedia web scraper that will extract the HTML content of HTML tables from pre-determined Wikipedia articles, and display the contents in a pre-determined
+  format using the pythons library. The web scraper will also use the extracted data to generate bar graphs of the contents in order to assist in comparisions, which was sunlight
+   duration in different cities of different continents during June of 2016. Futhermore, the page also features a HTML table code generator using the extracted data and a web scraper
+   that will continously follow links from a pre-determined wikipedia page and extract the title, until is is rate limited.</p>
+  
+  <h2>Instructions</h2>
+   
+   <p>Download the python file named "final_project_wiki.py" and run the program. When the first bar graph is opened, which depicts sunlight duration for African cities in June,
+   look in the shell. The shell will have a panda-generated table, which was extracted by the table class name of https://en.m.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population. 
+   Scroll down, and there is another panda-generated table, which was also extracted by a table class name, but from https://en.m.wikipedia.org/wiki/List_of_most_valuable_crops_and_livestock_products. Scroll down once 
+   again, and you will see lists of cities and the corresponding sunlight duration, and each list represents the reflects the HTML Table content for a particlaur continent. The next 
+   six graphs reflect the sunlight data for each continent of the six graphs at https://en.wikipedia.org/wiki/List_of_cities_by_sunshine_duration . Close each graph after you are done 
+   viewing it, as they should be used as temporary pauses(there are a total of six) to view the shell of the program or analyze the graphs. After the graphs, there is a HTML table code 
+   generator that uses the city and sunlight value lists, respectively, to generate a HTML table, which can be viewed by copying and pasting the output into Notepad. The continous web scraper
+   will begin running immediately after the HTML is outputted, and it will continue until it is rate limited by Wikipedia.</p>
+   
+   
+   <h2>How it Works</h2>
+   
+   <p>The program uses the requests and beautiful soup library in order to extract HTML content, and searchs by HTML class tags, table tags, tr, and td tags to determine the location
+   of the specific data inside the tables that we are interested in. Then, it iterates through each row of the table and appends the city name into a series of lists, and the 
+   corresponding sunlight value into another list. Since lists were generated for each table(Africa, Europe, Asia, North America, South America, Oceania) on the Wikipedia page, 
+   which corresponded to different countries and therefore different sunshine durations, I manually copied and pasted the outputs into different lists to generate bar graphs, using a python 
+   library known as matplotlib. The HTML table generator works based on common patterns I noticed in HTML tables, one of which was how the columns are made with <td> tags, 
+   and I iterated over each element of the list and printed it as a string in the function. The random Wikipedia scraper finds the title of the Wikipedia page it is on by extracting
+   the firstheading ID(obtained through inspect element) and extracting the links by looking for all <a> tags, and making use of the random library to vist another and repeating the process
+   until it is rate limited.</p>
+   
+   <h2>Files</h2>
+    
+    <ul>
+      
+      <li>final.html: this html file</li>
+    <li>final.css: css file that allows for formatting</li>
+   <li>scrape-wiki.py: Python file that contains the Wikipedia Web scraper, as well as the HTML table generator and random Wikipedia article scraper.</li>
+     </ul>
+     
+   <h2>Resources</h2> 
+     
+   <p>I used the requests module, which uses HTTP requests to get the HTML content of a webpage, to extract the HTML of my target Wikipedia articles by providing the URL. I used the 
+     the beautiful soup library in order to search through the HTML content provided by requests with the specific HTML tags that are charcteristic of tables,and used the find and
+     find_all to scrape the contents of the data and append it to lists for easier processing. I used the pandas module in order to format the HTML content into more a more readable form,
+     as it was a way to understand more about the different HTML tags of each section and how exactly to get the data I would need for the sunshine duration and corresponding city. Some
+     online resources I used are listed below.</p>
+    
+   <li><a href="https://www.freecodecamp.org/news/scraping-wikipedia-articles-with-python/#:~:text=1%20Setting%20up%20the%20scraper.%20To%20start%2C%20I%27m,Creating%20an%20endless%20scraper.%20...%205%20Conclusion.%20">Free Code Camp</a></li>
+   <li><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></li>
+    <li><a href="https://beautiful-soup-4.readthedocs.io/en/latest/">Beautiful Soup Documentation</a></li>
+     
+    <h2>Bugs, Errors, And Things to Be Aware Of</h2>
+     <ul>
+     <li>Continous Web Scraper will get Rate Limited, it is the function at the end, and will either cause the program to stop running or throw an error.</li>
+      <li>Different Wikipedia Articles have different ID and Class tags, so if the URL is changed to a different article, the program may not work</li>
+       <li>Zoom in on the graphs MatPlotLib generates, because it is hard to see the city names because I had to decrease the font size.</li>
+       <li>HTML table code generator does not properly iterate through the list of city names, so although it prints valid HTML, the city names are repeated and do not include all the city names.</li>
+     </ul>
+         
+      
+   
+     
+     
+     <img class="fit-picture"
+     src="https://i2.wp.com/broadmag.com/wp-content/uploads/2017/06/20-health-benefits-of-basketball-7.jpg?resize=660%2C511" width = "1200" >
