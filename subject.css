@@ -1,0 +1,49 @@
+html {
+ font-size:large;
+ background-color:antiquewhite;
+}
+
+h1 {
+ border: 1rem solid;
+ border-width: 0.5em;
+ color:orange
+}
+
+
+p {
+ font-family: system-ui;
+  font-size: medium;
+}
+
+
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ font-weight:bold;
+ text-transform:uppercase;
+  background-color: lightsteelblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.wrapper a.active {
+ background: lightseagreen;
+}
