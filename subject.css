@@ -6,20 +6,20 @@ html {
 h1 {
  border: 1rem solid;
  border-width: 0.5em;
- color:chocolate
+ color:blue
 }
 
 
 p {
  font-family: system-ui;
   font-size: medium;
- color:red
+ color:black
 }
 
 
 
 li a {
-  color: red;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
 }
