@@ -6,7 +6,7 @@ html {
 h1 {
  border: 1rem solid;
  border-width: 0.5em;
- color:black
+ color:red
 }
 
 
@@ -17,22 +17,8 @@ p {
 
 
 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
- font-weight:bold;;
-}
-
-li {
-  float: left;
-}
-
 li a {
-  color: black;
-  text-align: center;
+  color: gold;
   padding: 14px 16px;
   text-decoration: none;
 }
